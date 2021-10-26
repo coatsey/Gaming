@@ -32,7 +32,18 @@ const closeMobileMenu = () => setClick(false);
                         </Link> 
                         {dropdown && <Dropdown />}
                       </li>
+                      <li className='nav-item'>
+                        <Link to='/contact-us' className='nav-links' onClick={closeMobileMenu}>
+                            Contact Us
+                        </Link> 
+                      </li>
+                      <li className='nav-item'>
+                        <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+                            Sign Up
+                        </Link> 
+                      </li>
                   </ul>
+                  <Button />
             </nav>
         </>
     )

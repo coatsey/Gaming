@@ -11,6 +11,21 @@ const [dropdown, setDropdown] = useState(false);
 const handleClick = () => setClick(!click);
 const closeMobileMenu = () => setClick(false);
 
+const onMouseEnter = () => {
+    if(window.innerWidth < 960) {
+        setDropdown(false)
+    } else {
+       setDropdown(true) 
+    }
+}
+const onMouseLeave = () => {
+    if(window.innerWidth < 960) {
+        setDropdown(false)
+    } else {
+       setDropdown(false) 
+    }
+}
+
     return (
         <>
             <nav className='navbar'>
@@ -26,9 +41,12 @@ const closeMobileMenu = () => setClick(false);
                             Home
                         </Link> 
                       </li>
-                      <li className='nav-item'>
+                      <li className='nav-item'
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                      >
                         <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                            Services <i className='fas fa-caret-down' />
+                            Loadouts <i className='fas fa-caret-down' />
                         </Link> 
                         {dropdown && <Dropdown />}
                       </li>
@@ -37,11 +55,11 @@ const closeMobileMenu = () => setClick(false);
                             Contact Us
                         </Link> 
                       </li>
-                      <li className='nav-item'>
+                      {/* <li className='nav-item'>
                         <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
                             Sign Up
                         </Link> 
-                      </li>
+                      </li> */}
                   </ul>
                   <Button />
             </nav>

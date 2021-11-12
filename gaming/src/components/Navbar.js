@@ -55,11 +55,6 @@ const onMouseLeave = () => {
                             Contact Us
                         </Link> 
                       </li>
-                      {/* <li className='nav-item'>
-                        <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
-                            Sign Up
-                        </Link> 
-                      </li> */}
                   </ul>
                   <Button />
             </nav>
